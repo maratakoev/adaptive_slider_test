@@ -11,7 +11,7 @@
     "lint": "eslint . --fix --cache --ext ts,js,vue --report-unused-disable-directives --max-warnings 1",
     "lint:fix": "eslint . --fix",
     "prepare": "husky",
-    "precommit": "npm run lint"
+    "precommit": ""
   },
   "husky": {
     "hooks": {
@@ -20,7 +20,7 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
-      "eslint . --fix"
+      "eslint . --fix --cache --report-unused-disable-directives --max-warnings 1"
     ]
   },
   "dependencies": {
