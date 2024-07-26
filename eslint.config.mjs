@@ -6,7 +6,7 @@ export default withNuxt(
 	{
 		files: ['**/*.ts', '**/*.js', '**/*.vue'],
 		rules: {
-			'no-console': 'warn',
+			'no-console': 'error',
 		},
 	},
 );
