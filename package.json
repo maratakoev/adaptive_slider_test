@@ -10,12 +10,11 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint . --fix --cache --ext ts,js,vue --report-unused-disable-directives --max-warnings 1",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky",
-    "precommit": ""
+    "prepare": "husky"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
