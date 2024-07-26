@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<NuxtRouteAnnouncer/>
+		<NuxtRouteAnnouncer />
 		<NuxtLayout>
-			<NuxtPage/>
+			<NuxtPage />
 			<UiButton>Я кнопка</UiButton>
 		</NuxtLayout>
 	</div>
