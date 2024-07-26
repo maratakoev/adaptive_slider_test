@@ -10,16 +10,18 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --cache --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "check-warnings": "eslint --quiet . && exit 0 || exit 1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run check-warnings"
     }
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
-      "eslint . --cache --fix"
+      "eslint --cache --fix",
+      "npm run check-warnings --silent"
     ]
   },
   "dependencies": {
