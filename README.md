@@ -1,10 +1,64 @@
+# Оглавление
+
+0. [Минимальные требования перед запуском проекта](#Минимальные-требования-перед-запуском-проекта)
+1. [Используемый стек](#Используемый-стек)
+2. [Code style](#Code-style)
+3. [Как включить авто форматирование кода в различных IDE](#Как-включить-авто-форматирование-кода-в-различных-IDE)
+4. [Структура проекта](#Структура-проекта)
+5. [Команды](#Команды)
+6. [](#)
+
 # Минимальные требования перед запуском проекта
 
-Ознакомиться с [документацией Nuxt 3](https://nuxt.com/docs/getting-started/introduction) хотя бы частично.
+Ознакомиться с [используемым стеком](#Используемый-стек), хотя бы частично.
 
-Минимальная версия `Node.js`: v18.20.4 (LTS)
+Установить минимальную версию `Node.js`: v18.20.4 (LTS)
 
-Минимальная версия `npm`: v10.7.0 (Latest)
+Установить минимальную версию `npm`: v10.7.0 (Latest)
+
+# Используемый стек
+
+- Фреймворк - [nuxt 3 @3.12.4](https://nuxt.com/docs/getting-started/introduction) 
+- Язык - [typescript @5.5.3](https://www.typescriptlang.org/docs/)
+- Глобальное хранилище - [@pinia/nuxt @0.5.1](https://nuxt.com/modules/pinia)
+- ui-kit - [shadcn-nuxt @0.10.4](https://www.shadcn-vue.com/docs/installation/nuxt.html)
+- Линтеры - [@nuxt/eslint @0.3.13](https://eslint.nuxt.com/), [husky @9.1.2](https://github.com/typicode/husky), [lint-staged @15.2.7](https://github.com/lint-staged/lint-staged)
+- Препроцессор - [SASS @1.77.8](https://sass-lang.com/)
+
+# Code style
+
+Несмотря на то, что на проекте используется автоматическое форматирование кода (как его включить [читать тут](#Как-включить-авто-форматирование-кода-в-различных-IDE)), есть вещи которые нужно контролировать самому **(иначе получите втык от ревьюера)**: 
+
+- Формат имен файлов - **kebab-case** 
+- Формат названий констант - **SCREAM_CASE**
+- Формат названий функций и переменных - **camelCase**
+- Формат названий CSS селекторов - [БЭМ](https://ru.bem.info/methodology/css/)
+
+# Как включить авто форматирование кода в различных IDE
+
+## VS Code
+
+1. Скачать плагин [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+2. В настройках пользователя `VS Code` (`settings.json`) добавить следующие параметры:
+```json
+{
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.run": "onSave"
+}
+```
+3. Перезапустить `IDE`
+
+## Webstorm
+
+1. Зайти в настройки `Settings`
+2. Вбить в поиске `ESLint`
+3. Внутри `ESLint` выбрать пункт `Automatic ESLint configuration` и поставить галочку в графе `Run eslint --fix on save`
+4. Перезапустить `IDE`
+
+Теперь при сохранении файла будет выполняться авто форматирование кода.
 
 # Структура проекта
 
@@ -86,75 +140,36 @@ scss/
 |
 - main.scss                // Главный SCSS файл
 ```
+# Команды
 
-## Setup
+## Установка
 
-Make sure to install the dependencies:
+Обязательно установите зависимости:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## Запуск локальной версии
 
-Start the development server on `http://localhost:3000`:
+Запустите сервер разработки на `http://localhost:3000` (если не занят):
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Сборка проекта
 
-Build the application for production:
+Сборка для продакшена:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+Локальный предварительный просмотр сборки:
 
 ```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Для получения дополнительной информации ознакомьтесь с [документацией по развертыванию](https://nuxt.com/docs/getting-started/deployment).
