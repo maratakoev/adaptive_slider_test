@@ -21,9 +21,10 @@
 - Фреймворк - [nuxt 3 @3.12.4](https://nuxt.com/docs/getting-started/introduction) 
 - Язык - [typescript @5.5.3](https://www.typescriptlang.org/docs/)
 - Глобальное хранилище - [@pinia/nuxt @0.5.1](https://nuxt.com/modules/pinia)
-- ui-kit - [shadcn-nuxt @0.10.4](https://www.shadcn-vue.com/docs/installation/nuxt.html)
-- Линтеры - [@nuxt/eslint @0.3.13](https://eslint.nuxt.com/), [husky @9.1.2](https://github.com/typicode/husky), [lint-staged @15.2.7](https://github.com/lint-staged/lint-staged)
+- Ui библиотека - [shadcn-nuxt @0.10.4](https://www.shadcn-vue.com/docs/installation/nuxt.html)
+- Линтеры - [@nuxt/eslint @0.3.13](https://eslint.nuxt.com/), [husky @9.1.4](https://github.com/typicode/husky), [lint-staged @15.2.7](https://github.com/lint-staged/lint-staged)
 - Препроцессор - [SASS @1.77.8](https://sass-lang.com/)
+- Работа с SVG - [nuxt-svgo @4.0.2](https://github.com/cpsoinos/nuxt-svgo)
 
 # Code style
 
@@ -35,6 +36,18 @@
 - Формат названий констант - **SCREAM_CASE**
 - Формат названий функций и переменных - **camelCase**
 - Формат названий CSS селекторов - [БЭМ](https://ru.bem.info/methodology/css/)
+- Формат названий иконок - **PascalCase** + Icon, пример:
+```vue
+<script>
+import AdminIcon from '@/assets/icons/16/admin.svg';
+import AdminBadgeIcon from '@/assets/icons/24/admin-badge.svg';
+</script>
+
+<template>
+    <AdminIcon />
+    <AdminBadgeIcon />
+</template>
+```
 
 # Как включить авто форматирование кода в различных IDE
 
