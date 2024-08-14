@@ -24,6 +24,15 @@ console.log(data);
 		>
 			Показать уведомление
 		</UiButton>
+		<UiButton
+			@click="() => {
+				errorNotification({
+					msg: 'Тестовое уведомление с ошибкой',
+				})
+			}"
+		>
+			Показать уведомление с ошибкой
+		</UiButton>
 	</div>
 </template>
 
