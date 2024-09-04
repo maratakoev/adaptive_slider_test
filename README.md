@@ -96,6 +96,7 @@ graph TD;
     nuxt-template-->layouts;
     nuxt-template-->model;
     nuxt-template-->pages;
+    nuxt-template-->plugins;
     nuxt-template-->public;
     nuxt-template-->server;
     nuxt-template-->utils;
@@ -213,6 +214,10 @@ scss/
 ## 📁 /pages
 
 В данной директории будут находиться все ваши страницы.
+
+## 📁 /plugins
+
+В данной директории будут находиться все ваши сторонние (или кастомные) плагины.
 
 ## 📁 /public
 
