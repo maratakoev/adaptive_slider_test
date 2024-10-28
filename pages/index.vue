@@ -1,15 +1,7 @@
-<script
-	setup
-	lang="ts"
->
+<script setup>
 import { useToast } from '@/components/ui-kit/toast/use-toast';
-import { authApi } from '~/api';
 
 const { toast } = useToast();
-
-const { data } = await authApi.isLogged();
-// eslint-disable-next-line no-console
-console.log(data);
 </script>
 
 <template>

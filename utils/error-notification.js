@@ -1,17 +1,15 @@
 import { useToast } from '~/components/ui-kit/toast';
-import { parseError } from '~/helpers';
-import type { FetchError } from '~/model';
 
 /**
  * Функция, которая запускает уведомление об ошибке.
  *
  * @param {Error | unknown} error - Объект ошибки.
  */
-export default function (error: Error | unknown)
+export default function (error)
 {
 	const { toast } = useToast();
 
-	const title = parseError(error as Error | FetchError);
+	const title = parseError(error);
 
 	toast({
 		title,
