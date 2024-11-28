@@ -27,10 +27,21 @@ export default defineNuxtConfig({
 		},
 	},
 	runtimeConfig:
-		{
-			public:
-				{
-					baseUrl: process.env.BASE_URL || '',
+	{
+		public:
+			{
+				baseUrl: process.env.BASE_URL || '',
+			},
+	},
+	// это нужно, чтобы можно было использовать миксины и переменные в компонентах, страницах
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					api: 'modern',
+					additionalData: `@use "@/assets/scss/helpers/_variables.scss" as *;  @use "@/assets/scss/helpers/_mixins.scss" as *;`,
 				},
+			},
 		},
+	},
 });
