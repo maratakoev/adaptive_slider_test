@@ -1,6 +1,8 @@
 import { Endpoints } from '~/constants';
 
-export const isLogged = async () =>
-{
-	return await useCustomFetch(Endpoints.AUTH_IS_LOGGED);
+export default {
+	isLogged: async () =>
+	{
+		return await useRequest(Endpoints.AUTH_IS_LOGGED);
+	},
 };
