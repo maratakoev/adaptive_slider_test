@@ -33,7 +33,6 @@
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.414.0",
     "nuxt": "^3.12.4",
-    "nuxt-svgo": "^4.0.2",
     "radix-vue": "^1.9.2",
     "reset-css": "^5.0.2",
     "shadcn-nuxt": "^0.10.4",
