@@ -26,7 +26,6 @@
 - Ui библиотека - [shadcn-nuxt @^0.10.4](https://www.shadcn-vue.com/docs/installation/nuxt.html)
 - Линтеры - [@nuxt/eslint @^0.3.13](https://eslint.nuxt.com/), [husky @^9.1.4](https://github.com/typicode/husky), [lint-staged @^15.2.7](https://github.com/lint-staged/lint-staged)
 - Препроцессор - [SASS @^1.77.8](https://sass-lang.com/)
-- Работа с SVG - [nuxt-svgo @^4.0.2](https://github.com/cpsoinos/nuxt-svgo)
 - Валидация - [@vee-validate/nuxt @^4.13.2](https://vee-validate.logaretm.com/v4/integrations/nuxt/), [@vee-validate/yup @^4.13.2](https://vee-validate.logaretm.com/v4/guide/composition-api/typed-schema#yup)
 
 # Code style
@@ -40,7 +39,7 @@
 - Формат названий констант - **SCREAM_CASE**
 - Формат названий функций и переменных - **camelCase**
 - Формат названий CSS селекторов - [БЭМ](https://ru.bem.info/methodology/css/)
-- Формат использования тегов (компонентов) - **kebab-case**
+- Формат использования тегов (компонентов) - **camelCase**
 
 # Как включить авто форматирование кода в различных IDE
 
